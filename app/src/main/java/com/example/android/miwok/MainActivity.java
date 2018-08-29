@@ -19,6 +19,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Find the "numbers' TextView by id
-        View numbers = findViewById(R.id.numbers);
+        TextView numbers = (TextView)findViewById(R.id.numbers);
         //Attaching a listener to the "numbers" TextView while creating a new object instance of an OnClickListener
         numbers.setOnClickListener(new View.OnClickListener(){
 
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Find the "colors' TextView by id
-        View colors = findViewById(R.id.colors);
+        TextView colors = (TextView)findViewById(R.id.colors);
         //Attaching a listener to the "numbers" TextView while creating a new object instance of an OnClickListener
         colors.setOnClickListener(new View.OnClickListener(){
 
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Find the "family' TextView by id
-        View family = findViewById(R.id.family);
+        TextView family = (TextView)findViewById(R.id.family);
         //Attaching a listener to the "numbers" TextView while creating a new object instance of an OnClickListener
         family.setOnClickListener(new View.OnClickListener(){
 
@@ -78,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Find the "phrases' TextView by id
-        View phrases = findViewById(R.id.phrases);
+        TextView phrases = (TextView)findViewById(R.id.phrases);
         //Attaching a listener to the "numbers" TextView while creating a new object instance of an OnClickListener
         phrases.setOnClickListener(new View.OnClickListener(){
 
