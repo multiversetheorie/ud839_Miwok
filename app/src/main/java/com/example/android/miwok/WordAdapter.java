@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
+//TODO Create custom adapter by overriding getView method to show more complex Views
 public class WordAdapter extends ArrayAdapter<Word> {
     @NonNull
     @Override
