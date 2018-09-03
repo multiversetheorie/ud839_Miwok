@@ -1,5 +1,3 @@
-//TODO Use this custom class!
-
 package com.example.android.miwok;
 
 public class Word {
