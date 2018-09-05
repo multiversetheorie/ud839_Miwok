@@ -11,20 +11,20 @@ public class NumbersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_numbers);
+        setContentView(R.layout.word_list);
 
-      ArrayList<Word> words = new ArrayList<>();
+        ArrayList<Word> words = new ArrayList<>();
 
-      words.add(new Word("one", "lutti"));
-      words.add(new Word("two", "otiiko"));
-      words.add(new Word("three", "tolookosu"));
-      words.add(new Word("four", "oyyisa"));
-      words.add(new Word("five", "massokka"));
-      words.add(new Word("six", "temmokka"));
-      words.add(new Word("seven", "kenekaku"));
-      words.add(new Word("eight", "kawinta"));
-      words.add(new Word("nine", "wo’e"));
-      words.add(new Word("ten", "na’aacha"));
+        words.add(new Word("one", "lutti"));
+        words.add(new Word("two", "otiiko"));
+        words.add(new Word("three", "tolookosu"));
+        words.add(new Word("four", "oyyisa"));
+        words.add(new Word("five", "massokka"));
+        words.add(new Word("six", "temmokka"));
+        words.add(new Word("seven", "kenekaku"));
+        words.add(new Word("eight", "kawinta"));
+        words.add(new Word("nine", "wo’e"));
+        words.add(new Word("ten", "na’aacha"));
 
         // Create an {@link WordAdapter}, whose data source is a two lists of Strings. The
         // adapter knows how to create layouts for each item in the list, using the
@@ -36,7 +36,7 @@ public class NumbersActivity extends AppCompatActivity {
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
-        // activity_numbers.xml layout file.
+        // word_listyout file.
         ListView listView = (ListView) findViewById(R.id.list);
 
         // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
