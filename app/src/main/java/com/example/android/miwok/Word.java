@@ -12,7 +12,7 @@ public class Word {
     private int mImageResourceId;
 
     /**
-     * Create a new Word object.
+     * Create a new Word object. (Constructor 1.)
      *
      * @param defaultTranslation is the word in a language that the user is already familiar with
      *                           (such as English)
@@ -24,6 +24,19 @@ public class Word {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
         mImageResourceId = imageResourceId;
+    }
+
+    /**
+     * Create a new Word object. (Constructor 2.)
+     *
+     * @param defaultTranslation is the word in a language that the user is already familiar with
+     *                           (such as English)
+     * @param miwokTranslation is the word in the Miwok language
+     *
+     */
+    public Word(String defaultTranslation, String miwokTranslation) {
+        mDefaultTranslation = defaultTranslation;
+        mMiwokTranslation = miwokTranslation;
     }
 
     /**
