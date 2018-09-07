@@ -59,9 +59,19 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         // Find the ImageView in the list_item.xml layout with the ID image
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);
-        // Get the image from the current Word object and
-        // set this image on the image ImageView
-        imageView.setImageResource(currentWord.getImageResourceId());
+        // Check if the current Word object has an image
+        if (currentWord.hasImage()) {
+            // If the Word has and image
+            // get the image from the current Word object and
+            // set this image on the image ImageView
+            imageView.setImageResource(currentWord.getImageResourceId());
+            // Set the View to be visible
+            imageView.setVisibility(View.VISIBLE);
+        } else {
+            // Otherwise hide the ImageView
+            imageView.setVisibility(View.GONE);
+        }
+
 
         // Find the TextView in the list_item.xml layout with the ID miwok_text_view
         TextView miwokTextView = (TextView) listItemView.findViewById(R.id.miwok_text_view);
