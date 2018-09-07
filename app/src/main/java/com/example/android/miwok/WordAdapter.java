@@ -72,7 +72,6 @@ public class WordAdapter extends ArrayAdapter<Word> {
             imageView.setVisibility(View.GONE);
         }
 
-
         // Find the TextView in the list_item.xml layout with the ID miwok_text_view
         TextView miwokTextView = (TextView) listItemView.findViewById(R.id.miwok_text_view);
         // Get the Miwok word from the current Word object and
@@ -85,7 +84,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         // set this text on the default_text_view TextView
         defaultTextView.setText(currentWord.getDefaultTranslation());
 
-        // Return the whole list item layout (containing 2 TextViews)
+        // Return the whole list item layout (containing 2 TextViews or 2 TextViews and 1 ImageView)
         // so that it can be shown in the ListView
         return listItemView;
 
