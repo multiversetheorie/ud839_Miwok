@@ -32,7 +32,7 @@ public class NumbersActivity extends AppCompatActivity {
         // This list item layout contains a two {@link TextViews}, which the adapter will set to
         // display a two words.
         WordAdapter wordAdapter =
-                new WordAdapter(this, words);
+                new WordAdapter(this, words, R.color.category_numbers);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
