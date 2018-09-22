@@ -64,4 +64,12 @@
         android:layout_marginRight="16dp"
         android:src="@drawable/round_play_arrow_white_24dp" />
     </RelativeLayout>
+
+    <!-- This is and empty view, which takes the width and height of the outer RelativeLayout -->
+    <!-- Its single purpose is to give feedback about clicking the list items via the background attribute -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/selectableItemBackground"/>
+
 </RelativeLayout>
