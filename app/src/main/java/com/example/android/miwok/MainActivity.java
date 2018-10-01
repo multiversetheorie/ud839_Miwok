@@ -15,12 +15,9 @@
  */
 package com.example.android.miwok;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,67 +28,16 @@ public class MainActivity extends AppCompatActivity {
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
-        //Find the "numbers' TextView by id
-        TextView numbers = (TextView)findViewById(R.id.numbers);
-        //Attaching a listener to the "numbers" TextView while creating a new object instance of an OnClickListener
-        numbers.setOnClickListener(new View.OnClickListener(){
+        // Find the view pager that will allow the user to swipe between fragments
+        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
 
-            //Setting what the freshly created event listener
-            @Override
-            public void onClick(View view) {
-                //Creating a new intent to open the NumbersActivity
-                Intent openNumbersActivity = new Intent(MainActivity.this, NumbersActivity.class);
-                //Starting the new activity
-                startActivity(openNumbersActivity);
-            }
-        });
+        // Create an adapter that knows which fragment should be shown on each page
+        CategoryAdapter adapter = new CategoryAdapter(getSupportFragmentManager());
+
+        // Set the adapter onto the view pager
+        viewPager.setAdapter(adapter);
 
 
-        //Find the "colors' TextView by id
-        TextView colors = (TextView)findViewById(R.id.colors);
-        //Attaching a listener to the "numbers" TextView while creating a new object instance of an OnClickListener
-        colors.setOnClickListener(new View.OnClickListener(){
-
-            //Setting what the freshly created event listener
-            @Override
-            public void onClick(View view) {
-                //Creating a new intent to open the NumbersActivity
-                Intent openColorsActivity = new Intent(MainActivity.this, ColorsActivity.class);
-                //Starting the new activity
-                startActivity(openColorsActivity);
-            }
-        });
-
-
-        //Find the "family' TextView by id
-        TextView family = (TextView)findViewById(R.id.family);
-        //Attaching a listener to the "numbers" TextView while creating a new object instance of an OnClickListener
-        family.setOnClickListener(new View.OnClickListener(){
-
-            //Setting what the freshly created event listener
-            @Override
-            public void onClick(View view) {
-                //Creating a new intent to open the NumbersActivity
-                Intent openFamilyActivity = new Intent(MainActivity.this, FamilyActivity.class);
-                //Starting the new activity
-                startActivity(openFamilyActivity);
-            }
-        });
-
-        //Find the "phrases' TextView by id
-        TextView phrases = (TextView)findViewById(R.id.phrases);
-        //Attaching a listener to the "numbers" TextView while creating a new object instance of an OnClickListener
-        phrases.setOnClickListener(new View.OnClickListener(){
-
-            //Setting what the freshly created event listener
-            @Override
-            public void onClick(View view) {
-                //Creating a new intent to open the NumbersActivity
-                Intent openPhrasesActivity = new Intent(MainActivity.this, PhrasesActivity.class);
-                //Starting the new activity
-                startActivity(openPhrasesActivity);
-            }
-        });
     }
 
 }
