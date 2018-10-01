@@ -31,6 +31,19 @@
         <item name="android:textAppearance">?android:textAppearanceMedium</item>
         <item name="android:background">?android:attr/selectableItemBackground</item>
     </style>
+    
+    <style name="TabIndicatorStyle">
+        <item name="tabIndicatorColor">@color/tab_selected</item>
+        <item name="tabTextColor">@color/tab_unselected</item>
+        <item name="tabSelectedTextColor">@color/tab_selected</item>
+        <item name="tabBackground">@color/primary_color</item>
+    </style>
+
+    <!-- App bar style -->
+    <style name="MiwokAppBarStyle" parent="@android:style/Widget.DeviceDefault.Light.ActionBar.Solid.Inverse">
+        <!-- Remove the shadow below the app bar -->
+        <item name="elevation">0dp</item>
+    </style>
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>

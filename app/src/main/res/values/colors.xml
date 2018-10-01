@@ -34,4 +34,10 @@
 
     <!-- Background color for the phrases category -->
     <color name="category_phrases">#16AFCA</color>
+
+    <!-- Color of unselected tabs -->
+    <color name="tab_unselected">#A8A19E</color>
+
+    <!-- Color of selected tabs -->
+    <color name="tab_selected">@android:color/white</color>
 </resources>
